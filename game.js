@@ -7,13 +7,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+$(document).keypress(start);
 
 $(".btn").click(function() {
 
@@ -44,6 +38,7 @@ function checkAnswer(currentLevel) {
       }, 200);
 
       startOver();
+      $("#play").text("playAgain")
     }
 }
 
@@ -76,4 +71,15 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  $("#play").css("display","inline");
+}
+
+function start() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+    $("#play").text("play")
+    $("#play").css("display","none");
+  }
 }

@@ -6,7 +6,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin:  2%;
   color: #FEF2BF;
 }
 
@@ -17,14 +17,28 @@ body {
 
 }
 
-.btn {
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
+@media screen and (min-width: 900px) {
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 12rem;
+    width: 12rem;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
 }
+@media screen and (max-width: 1200px) {
+  .btn {
+    margin: 15px;
+    display: inline-block;
+    height: 8rem;
+    width: 8rem;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+}
+
+
 
 .game-over {
   background-color: red;
@@ -50,4 +64,12 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+.invbutton{
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color:grey;
+  color:bisque;
+  box-shadow: 2px 2px black;
 }
