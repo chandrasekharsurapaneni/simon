@@ -11,34 +11,64 @@ body {
 }
 
 .container {
-  display: block;
-  width: 50%;
-  margin: auto;
-
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  grid-template-rows: 10rem 10rem;
+  gap: 2rem;
+  position: relative;
+  right: 2rem;
 }
 
-@media screen and (min-width: 900px) {
+.row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding-top: 2rem;
+}
+
+/* @media (min-width: 1200px) {
   .btn {
     margin: 25px;
     display: inline-block;
-    height: 14rem;
-    width: 14rem;
+    height: 200px;
+    width: 200px;
     border: 10px solid black;
     border-radius: 20%;
   }
 }
-@media screen and (max-width: 1200px) {
+
+@media (max-width: 571px) {
   .btn {
     margin: 5px;
     display: inline-block;
-    height: 13rem;
-    width: 13rem;
+    height: 450px;
+    width: 450px;
     border: 10px solid black;
     border-radius: 20%;
+    background-color: red;
   }
+} */
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 10rem;
+  width: 10rem;
+  border: 10px solid black;
+  border-radius: 20%;
 }
-
-
+@media (max-width: 571px) {
+  .btn {
+    margin: 25px;
+  display: inline-block;
+  height: 10rem;
+  width: 100%;
+  border: 10px solid black;
+  border-radius: 20%;
+  }
+} 
 
 .game-over {
   background-color: red;
@@ -66,10 +96,11 @@ body {
   background-color: grey;
 }
 .invbutton{
-  width: 100px;
-  height: 50px;
+  display: inline;
   border-radius: 10px;
   background-color:grey;
   color:bisque;
   box-shadow: 2px 2px black;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
 }
